@@ -17,7 +17,7 @@ gem 'jquery-rails'
 
 group :test do
 	gem 'rspec-rails'
-	gem 'guard-rspec'
+	gem 'guard-rails'
 	gem 'growl'
 	gem 'factory_girl_rails'
 end
