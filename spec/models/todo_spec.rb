@@ -21,6 +21,4 @@ describe Todo do
   	@todo.done.should_not be_nil
   	@todo.done.should == false
   end
-
-
 end

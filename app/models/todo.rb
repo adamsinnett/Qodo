@@ -5,6 +5,8 @@ class Todo < ActiveRecord::Base
 	validates :body, :presence => true
 	validate :deadline_cannot_be_in_the_past
 
+	private
+	
 	def deadline_cannot_be_in_the_past
 		if !deadline.blank? and deadline < Date.today
 			errors.add(:deadline, "can't be in the past")
