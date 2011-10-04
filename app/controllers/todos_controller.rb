@@ -1,6 +1,7 @@
 class TodosController < ApplicationController
   def index
-    @todos = Todo.find_all
+    @todos_unfinished = Todo.unfinished
+    @todos_finished = Todo.finished
     
     respond_to do |wants|
       wants.html

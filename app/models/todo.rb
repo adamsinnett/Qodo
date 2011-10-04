@@ -2,6 +2,9 @@ class Todo < ActiveRecord::Base
 
 	after_initialize :init
 
+	scope :unfinished, where(:done => false)
+	scope :finished, where(:done => true)
+
 	validates :body, :presence => true
 	validate :deadline_cannot_be_in_the_past
 
