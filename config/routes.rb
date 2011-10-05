@@ -1,13 +1,8 @@
 Qodo::Application.routes.draw do
-  get "todos/index"
 
-  get "todos/new"
+  resources :todos
+  root :to => "todos#index"
 
-  get "todos/create"
-
-  get "todos/edit"
-
-  get "todos/show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,2 +1,8 @@
-<h1>Todos#index</h1>
-<p>Find me in app/views/todos/index.html.erb</p>
+<% <% if !@todos_unfinished.blank? %>
+  <% for @todo_unfinished in @todos_unfinished %>
+    <%= @todo_unfinished.body %><br />
+    <%= @todo_unfinished.desc %>
+  <% end %>
+<% else %>
+  
+<% end %>
