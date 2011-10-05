@@ -13,7 +13,7 @@ class TodosController < ApplicationController
   end
 
   def create
-    @todo = Todo.find(:params[:id])
+    @todo = Todo.find(params[:todo])
 
     redirect_to 'Todos/index'
   end
