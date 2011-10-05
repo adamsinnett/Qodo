@@ -1,8 +1,10 @@
-<% <% if !@todos_unfinished.blank? %>
+<% if !@todos_unfinished.blank? %>
   <% for @todo_unfinished in @todos_unfinished %>
+	<p>
     <%= @todo_unfinished.body %><br />
-    <%= @todo_unfinished.desc %>
+    <%= @todo_unfinished.desc %><br />
+	</p>
   <% end %>
 <% else %>
-  
+ 	<p> No todos found </p>
 <% end %>
